@@ -13,23 +13,29 @@
 % CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
 %
 
-
 %-------------------------------------------------------------------------------
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
 % A4 paper size by default, use 'letterpaper' for US letter
 \documentclass[11pt, a4paper]{awesome-cv}
 
+% definition of \FA as a shortcut to load the Font Awesome font
+%\defaultfontfeatures{	Path = /Users/davescott/Documents/Awesome-CV/examples}
+\newfontfamily{\FA}[/Users/davescott/Documents/Awesome-CV/examples/]{FontAwesome}
+
+\documentclass{article}
+\usepackage{fontspec}
+
 % Configure page margins with geometry
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
 % Specify the location of the included fonts
-\fontdir[fonts/]
+\fontdir[Users/davescott/Documents/Awesome-CV/examples/fonts/]
 
 % Color for highlights
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
 %                 awesome-nephritis, awesome-concrete, awesome-darknight
-\colorlet{awesome}{awesome-red}
+\colorlet{awesome}{awesome-orange}
 % Uncomment if you would like to specify your own color
 % \definecolor{awesome}{HTML}{CA63A8}
 
@@ -53,6 +59,7 @@
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
 % \photo[rectangle,edge,right]{./examples/profile}
+<<<<<<< HEAD
 \name{Dave}{Scott}
 \position{Machine Learning Engineer{\enskip\cdotp\enskip}Data Scientist}
 \address{42-8, Bangbae-ro 15-gil, Seocho-gu, Seoul, 00681, Rep. of KOREA}
@@ -62,6 +69,17 @@
 \homepage{www.posquit0.com}
 \github{posquit0}
 \linkedin{posquit0}
+=======
+\name{David}{Scott}
+\position{Machine Learning Engineer{\enskip\cdotp\enskip}Data Scientist}
+\address{Zijing Apartment Building No. 20, Tsinghua University, Beijing 100084, P. R. China}
+
+\mobile{(+86) 135-5220-1174
+\email{davejscott@shaw.ca}
+%\homepage{www.posquit0.com}
+\github{davejscott}
+\linkedin{davejscott}
+>>>>>>> 01881bc484533b0d41bd0b33c3115a587cb88146
 % \gitlab{gitlab-id}
 % \stackoverflow{SO-id}{SO-name}
 % \twitter{@twit}
@@ -72,8 +90,6 @@
 %% \firstname and \lastname will be used
 % \googlescholar{googlescholar-id}{}
 % \extrainfo{extra informations}
-
-\quote{``Be the change that you want to see in the world."}
 
 
 %-------------------------------------------------------------------------------
@@ -87,7 +103,7 @@
 % Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
-  {Byungjin Park~~~·~~~Résumé}
+  {Scott David~~~·~~~Résumé}
   {\thepage}
 
 
@@ -95,13 +111,13 @@
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
+\input{resume/education.tex}
 \input{resume/summary.tex}
 \input{resume/experience.tex}
 \input{resume/honors.tex}
 \input{resume/presentation.tex}
 \input{resume/writing.tex}
 \input{resume/committees.tex}
-\input{resume/education.tex}
 \input{resume/extracurricular.tex}
 
 
